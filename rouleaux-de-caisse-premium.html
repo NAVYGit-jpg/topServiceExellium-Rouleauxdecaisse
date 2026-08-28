@@ -657,39 +657,6 @@ input[type="range"]::-moz-range-thumb{
 }
 .offer p{color:#C2D0E8;font-size:1rem}
 
-/* ============ TEMOIGNAGES ============ */
-.notice{
-  display:flex;gap:12px;align-items:flex-start;
-  padding:14px 18px;border-radius:var(--r-md);margin-bottom:var(--space-5);
-  background:var(--accent-soft);border:1px dashed var(--gold-500);
-  font-size:.92rem;color:var(--ink-2);
-}
-.notice svg{flex:none;margin-top:2px;color:var(--gold-700)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .notice svg{color:var(--gold-400)}}
-:root[data-theme="dark"] .notice svg{color:var(--gold-400)}
-.notice b{color:var(--ink)}
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:var(--space-4);perspective:1300px}
-.quote{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
-  padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);
-  box-shadow:var(--shadow-1);position:relative;
-  transition:transform var(--dur-slow) var(--ease-out),box-shadow var(--dur-slow) var(--ease-out),border-color var(--dur);
-}
-.quote:hover{transform:translateY(-7px) rotateX(2.5deg);box-shadow:var(--shadow-3);border-color:var(--gold-400)}
-.quote .mark{position:absolute;top:16px;right:20px;font-family:'Lexend',sans-serif;font-size:4rem;
-  line-height:1;color:var(--accent-soft);font-weight:800;user-select:none}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .quote .mark{color:#16244096}}
-.stars{display:flex;gap:3px;color:var(--gold-500)}
-.quote blockquote{margin:0;font-size:1.03rem;color:var(--ink-2);line-height:1.6;position:relative;z-index:1}
-.quote figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border)}
-.avatar{
-  width:46px;height:46px;flex:none;border-radius:50%;display:grid;place-items:center;
-  background:var(--navy-800);color:var(--gold-300);
-  font-family:'Lexend',sans-serif;font-weight:700;font-size:.92rem;
-}
-.who b{display:block;font-family:'Lexend',sans-serif;font-weight:600;font-size:.92rem;line-height:1.35}
-.who span{color:var(--ink-3);font-size:.85rem}
-
 /* ============ FAQ ============ */
 .faq{max-width:860px;margin-inline:auto}
 .acc{
@@ -810,8 +777,6 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
  <symbol id="ic-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5.5v13M5.5 12h13"/></symbol>
  <symbol id="ic-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5.5 12h13"/></symbol>
  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12.5 6l6 6-6 6"/></symbol>
- <symbol id="ic-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></symbol>
- <symbol id="ic-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11.2v5"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></symbol>
  <symbol id="ic-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8.5V3h10v5.5"/><path d="M7 16.5H4.5a1.5 1.5 0 0 1-1.5-1.5v-5a1.5 1.5 0 0 1 1.5-1.5h15A1.5 1.5 0 0 1 21 10v5a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 13.5h10V21H7z"/></symbol>
  <symbol id="ic-format" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></symbol>
  <symbol id="ic-partner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 20.2a6.2 6.2 0 0 1 12.4 0"/><circle cx="17.4" cy="9.2" r="2.4"/><path d="M16.6 14.2a5.2 5.2 0 0 1 4.6 6"/></symbol>
@@ -1139,7 +1104,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
               <input type="checkbox" id="optFirst" checked>
               <span class="switch-ui" aria-hidden="true"></span>
               <span class="switch-txt"><b>Offre découverte — 1<sup>re</sup> commande</b>
-                <span>2 unités gratuites</span></span>
+                <span>2 unités gratuites + remise spéciale</span></span>
             </label>
             <label class="switch">
               <input type="checkbox" id="optLoyal">
@@ -1226,7 +1191,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
         <span class="offer-ic"><svg width="30" height="30" aria-hidden="true"><use href="#ic-gift"/></svg></span>
         <h3>Offre découverte — 1<sup>re</sup> commande</h3>
         <span class="headline">2 unités gratuites + réduction spéciale</span>
-        <p>Profitez d'un bonus spéciale dès votre première commande pour tester notre qualité
+        <p>Profitez d'une remise spéciale dès votre première commande pour tester notre qualité
           en toute confiance. Deux rouleaux vous sont offerts.</p>
       </article>
       <article class="offer r3d" data-d="2">
@@ -1246,9 +1211,6 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
     </div>
   </div>
 </section>
-
-
-<!-- ================= TEMOIGNAGES ================= -->
 
 
 <!-- ================= FAQ ================= -->
@@ -1274,7 +1236,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
           <span class="q">En quoi consiste l'offre découverte ?</span>
           <span class="acc-ic" aria-hidden="true"><svg width="16" height="16"><use href="#ic-plus"/></svg></span>
         </button>
-        <div class="acc-body" id="a2"><div><p>Dès votre première commande, vous bénéficiez d'une <b>bonus spéciale</b>
+        <div class="acc-body" id="a2"><div><p>Dès votre première commande, vous bénéficiez d'une <b>remise spéciale</b>
           et de <b>2 unités gratuites</b>. L'objectif est simple : vous permettre de tester notre qualité en toute confiance,
           sans engagement.</p></div></div>
       </div>
@@ -1357,7 +1319,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
     <h2>Moins de dépenses,<br>plus de <span class="gold-text">sérénité</span></h2>
     <p class="script">Choisissez la qualité, gagnez en sérénité !</p>
     <p style="color:#C2D0E8;max-width:56ch">Passez votre première commande et profitez de l'offre découverte :
-      2 unités gratuites et un bonus spéciale.</p>
+      2 unités gratuites et une remise spéciale.</p>
 
     <div class="phones">
       <a class="phone" href="tel:+2250153445278">
@@ -1403,7 +1365,6 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
           <h4>En savoir plus</h4>
           <ul>
             <li><a href="#secteurs">Secteurs équipés</a></li>
-            
             <li><a href="#faq">Questions fréquentes</a></li>
           </ul>
         </div>
@@ -1696,7 +1657,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
         'Budget estimé : ' + fmt(q*PRIX_CARTON) + ' FCFA',
         '',
         'Offres retenues :',
-        (optFirst.checked ? '- Offre découverte (1re commande) : 2 unités gratuites' : ''),
+        (optFirst.checked ? '- Offre découverte (1re commande) : 2 unités gratuites + remise spéciale' : ''),
         (optLoyal.checked ? '- Prime de fidélité : 24 unités offertes (11e commande)' : ''),
         '',
         'Contact : +225 01 53 44 52 78 / +225 01 70 14 67 25'
